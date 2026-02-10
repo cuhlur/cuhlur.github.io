@@ -1,90 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <title>Cuhlur/tv</title>
-  <style>
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV | CUHLUR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .tv-card { background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .tv-card:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.06); color: #fff; }
+        
+        /* Smooth fade in for the grid */
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZD9DR8ZX5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LZD9DR8ZX5');
+    </script>
 </head>
-<body>
-<a href="/">home</a>
-<ul>
-  <li>@midnight</li>
-  <li>3 out 10 cats do countdown</li>
-  <li>120 minutes</li>
-  <li>a.p. bio</li>
-  <li>abbott elementary</li>
-  <li>After midnight</li>
-  <li>archer</li>
-  <li>arrested development</li>
-  <li>ash vs evil dead</li>
-  <li>austin city limits</li>
-  <li>Barry</li>
-  <li>beavis & butt-head</li>
-  <li>better call saul</li>
-  <li>better off ted</li>
-  <li>Bobs burgers</li>
-  <li>Bored to death</li>
-  <li>bosch</li>
-  <li>brooklyn nine-nine</li>
-  <li>catch-22</li>
-  <li>Chappelles show</li>
-  <li>charlie rose</li>
-  <li>curb your enthusiasm</li>
-  <li>dennis miller live</li>
-  <li>drive to survive</li>
-  <li>duckman</li>
-  <li>eastbound & down</li>
-  <li>Family guy</li>
-  <li>frasier</li>
-  <li>friends</li>
-  <li>funny people</li>
-  <li>futurama</li>
-  <li>ghosts</li>
-  <li>gravity falls</li>
-  <li>Its always sunny in philadelphia</li>
-  <li>jeopardy</li>
-  <li>johnny bago</li>
-  <li>just shoot me</li>
-  <li>king of the hill</li>
-  <li>la ruleta de la suerta</li>
-  <li>madtv</li>
-  <li>Mtv unplugged</li>
-  <li>Newsradio</li>
-  <li>over the garden wall</li>
-  <li>portlandia</li>
-  <li>Qi</li>
-  <li>real time with bill maher</li>
-  <li>Reno 911</li>
-  <li>river</li>
-  <li>robot chicken</li>
-  <li>saturday night live</li>
-  <li>seinfeld</li>
-  <li>Silicon valley</li>
-  <li>singled out</li>
-  <li>south park</li>
-  <li>sportscenter</li>
-  <li>survivor</li>
-  <li>taxicab confessions</li>
-  <li>the big o</li>
-  <li>the colbert report</li>
-  <li>the daily show</li>
-  <li>The high life</li>
-  <li>the kids in the hall</li>
-  <li>the late show with david letterman</li>
-  <li>the nightly show with larry wilmore</li>
-  <li>the office UK</li>
-  <li>the office US</li>
-  <li>The simpsons</li>
-  <li>the x files</li>
-  <li>trl</li>
-  <li>true detective</li>
-  <li>twin peaks</li>
-  <li>ugly americans</li>
-  <li>Vice principals</li>
-  <li>workaholics</li>
-</ul>
-<!-- <li></li> -->
+<body class="p-6 md:p-16">
+
+    <nav class="max-w-6xl mx-auto mb-12">
+        <a href="/" class="text-xs tracking-[0.2em] uppercase text-gray-400 hover:text-white transition">← Archive Home</a>
+    </nav>
+
+    <header class="max-w-6xl mx-auto mb-16">
+        <h1 class="text-5xl md:text-7xl serif italic font-bold tracking-tighter">TV.</h1>
+        <p class="mt-4 text-gray-500 uppercase tracking-widest text-xs">Serialized Narrative & Broadcast Culture</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 fade-in">
+        
+        <script>
+            const tvShows = [
+                "@midnight", "3 Out 10 Cats Do Countdown", "120 Minutes", "A.P. Bio", "Abbott Elementary", 
+                "After Midnight", "Archer", "Arrested Development", "Ash vs Evil Dead", "Austin City Limits", 
+                "Barry", "Beavis & Butt-Head", "Better Call Saul", "Better Off Ted", "Bobs Burgers", 
+                "Bored to Death", "Bosch", "Brooklyn Nine-Nine", "Catch-22", "Chappelles Show", 
+                "Charlie Rose", "Curb Your Enthusiasm", "Dennis Miller Live", "Drive to Survive", 
+                "Duckman", "Eastbound & Down", "Family Guy", "Frasier", "Friends", "Funny People", 
+                "Futurama", "Ghosts", "Gravity Falls", "Its Always Sunny in Philadelphia", "Jeopardy", 
+                "Johnny Bago", "Just Shoot Me", "King of the Hill", "La Ruleta de la Suerta", "Madtv", 
+                "Mtv Unplugged", "Newsradio", "Over the Garden Wall", "Portlandia", "Qi", 
+                "Real Time with Bill Maher", "Reno 911", "River", "Robot Chicken", "Saturday Night Live", 
+                "Seinfeld", "Silicon Valley", "Singled Out", "South Park", "Sportscenter", "Survivor", 
+                "Taxicab Confessions", "The Big O", "The Colbert Report", "The Daily Show", "The High Life", 
+                "The Kids in the Hall", "The Late Show with David Letterman", "The Nightly Show with Larry Wilmore", 
+                "The Office UK", "The Office US", "The Simpsons", "The X Files", "Trl", "True Detective", 
+                "Twin Peaks", "Ugly Americans", "Vice Principals", "Workaholics"
+            ];
+
+            // Alphabetical Sort
+            tvShows.sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
+
+            document.write(tvShows.map(show => `
+                <div class="tv-card border border-white/5 p-4 md:p-6 rounded flex items-center justify-center text-center min-h-[100px] group cursor-default">
+                    <span class="text-sm md:text-base font-medium tracking-tight group-hover:scale-105 transition-transform">
+                        ${show}
+                    </span>
+                </div>
+            `).join(''));
+        </script>
+
+    </main>
+
+    <footer class="max-w-6xl mx-auto mt-32 mb-12 border-t border-white/5 pt-8 text-[10px] text-gray-700 tracking-[0.2em] uppercase flex justify-between">
+        <p>© 2026 CUHLUR</p>
+        <p>Broadcast Archive</p>
+    </footer>
+
 </body>
 </html>
