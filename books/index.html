@@ -1,24 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <title>Cuhlur/books</title>
-  <style>
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | CUHLUR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .book-card { background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .book-card:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); transform: scale(1.02); }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZD9DR8ZX5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LZD9DR8ZX5');
+    </script>
 </head>
-<body>
-<a href="/">home</a>
-<ul>
-  <li>Allen ginsberg-howl</li>
-  <li>F scott fitzgerald-the great gatsby</li>
-  <li>F scott fitzgerald-this side of paradise</li>
-  <li>Jd salinger-the catcher in the rye</li>
-  <li>Jack kerouac-on the road</li>
-  <li>Legs mcneill-please kill me</li>
-  <li>Phillip roth-portnoys complaint</li>
-  <li>William s burrough-naked lunch</li>
-</ul>
+<body class="p-6 md:p-16">
+
+    <nav class="max-w-4xl mx-auto mb-12">
+        <a href="/" class="text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-white transition">← Archive Home</a>
+    </nav>
+
+    <header class="max-w-4xl mx-auto mb-16">
+        <h1 class="text-5xl md:text-7xl serif italic font-bold tracking-tighter">Books.</h1>
+        <p class="mt-4 text-gray-500 uppercase tracking-widest text-xs">Essential Literature & Counter-Culture</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto space-y-4">
+        
+        <script>
+            // Your list converted to a structured array
+            const books = [
+                { author: "Allen Ginsberg", title: "Howl" },
+                { author: "F. Scott Fitzgerald", title: "The Great Gatsby" },
+                { author: "F. Scott Fitzgerald", title: "This Side of Paradise" },
+                { author: "J.D. Salinger", title: "The Catcher in the Rye" },
+                { author: "Jack Kerouac", title: "On the Road" },
+                { author: "Legs McNeill", title: "Please Kill Me" },
+                { author: "Philip Roth", title: "Portnoy's Complaint" },
+                { author: "William S. Burroughs", title: "Naked Lunch" }
+            ];
+
+            document.write(books.map(book => `
+                <div class="book-card border border-white/5 p-6 md:p-8 rounded-lg flex flex-col md:flex-row md:items-center justify-between group">
+                    <span class="text-gray-500 text-xs uppercase tracking-widest mb-1 md:mb-0">${book.author}</span>
+                    <span class="text-xl md:text-2xl serif group-hover:italic transition-all">${book.title}</span>
+                </div>
+            `).join(''));
+        </script>
+
+    </main>
+
+    <footer class="max-w-4xl mx-auto mt-32 mb-12 border-t border-white/5 pt-8 text-[10px] text-gray-700 tracking-[0.2em] uppercase flex justify-between">
+        <p>© 2026 CUHLUR</p>
+        <p>Literary Section</p>
+    </footer>
 
 </body>
 </html>
