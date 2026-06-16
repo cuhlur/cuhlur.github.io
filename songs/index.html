@@ -1,110 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songs | CUHLUR</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
-        
-        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .track-row { border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.2s ease; }
-        .track-row:hover { background: rgba(255,255,255,0.03); padding-left: 10px; border-bottom-color: rgba(255,255,255,0.2); }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuhlur | Artists</title>
+ <link rel="stylesheet" href="styles.css">
+<style>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LZD9DR8ZX5');
-    </script>
+</style>
+
 </head>
-<body class="p-6 md:p-16">
-
-    <nav class="max-w-4xl mx-auto mb-12">
-        <a href="/" class="text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-white transition">← Archive Home</a>
-    </nav>
-
-    <header class="max-w-4xl mx-auto mb-16">
-        <h1 class="text-5xl md:text-7xl serif italic font-bold tracking-tighter">Songs.</h1>
-        <p class="mt-4 text-gray-500 uppercase tracking-widest text-xs">A Sonic Catalog Sorted by Artist</p>
-    </header>
-
-    <main class="max-w-4xl mx-auto mb-24">
-        <div id="tracklist">
-            </div>
-    </main>
-
-    <script>
-        const rawSongs = [
-            "Andrew Bird – Pulaski at Night", "Balthazar-then what", "Ben Folds – Landed (Strings Version)", 
-            "Big Black Delta – Roost", "Billy Talent – Try Honesty", "Black Kids – Hurricane Jane", 
-            "Blues Traveler – Conquer Me", "Bob Dylan – Ballad of a Thin Man", "Bob Dylan – Tangled Up in Blue", 
-            "bob dylan-tangled up in blue (live)", "Box Car Racer – Cat Like Thief", "Caesars – Jerk It Out", 
-            "Cake – I Will Survive", "Cass McCombs – Sleeping Volcanoes", "Ceelo Green – Livin Again", 
-            "Cloud Control – Promises", "cloud control-promises", "Cymbals eat guitars-keep me waiting", 
-            "Daniel Johnston – True Love Will Find You in the End", "Deep Sea Diver – Keep It Moving", 
-            "Delta Spirit – Strange Vine", "Diarrhea Planet – Separations", "Elenowen-let it all go", 
-            "Fleet Foxes – Mykonos", "Fur-anybody else but me", "Geggy tah-wherever you are", 
-            "geggy tah-whoever you are", "Grateful Dead – Althea", "Grizzly Bear – Two Weeks", 
-            "Grizzly Bear – While You Wait for the Others", "grizzly bear-while you wait for the others (live)", 
-            "Guillemots – Trains to Brazil", "Hedwig and the Angry Inch – Wig Off the Shelf", 
-            "Holy Holy – Believe Anything", "John Legend & The Roots – Compared to What", 
-            "Kopecky – Are You Listening", "Le Fits – Sign Language", "Local Natives – Breakers", 
-            "Lost in the Trees – Golden Eyelids", "Manchester Orchestra & The Front Bottoms – Allentown", 
-            "Manchester Orchestra – The Gold", "Maxband – Cut It Loose", "Mazzy Star – In the Kingdom", 
-            "Miike Snow – Animal", "Misfits – Last Caress", "Modest Mouse – Lampshades on Fire", 
-            "Moss-chapparel", "Nation of language-from the hill", "Nicola Benedetti – Ae Fond Kiss", 
-            "Nirvana – Drain You", "Pearl Jam – Blood", "Pearl Jam – State of Love and Trust", 
-            "pearl jam-state of love and trust (live)", "Pharell williams & trey parker-hug me", 
-            "PUP – Familiar Patterns", "Pup-sleep in the heat", "RAC – Tear You Down", 
-            "Radiohead – In Limbo", "Rage Against the Machine – Killing in the Name", 
-            "Rancid – Roots Radical", "Real estate-haunted world", "Red Hot Chili Peppers – Velvet Glove", 
-            "Reel Big Fish – Beer", "River Whyless – Miles of Skyline", "Rmr-welfare", 
-            "Roger Sanchez – Another Chance", "Sam Cooke – A Change Gonna Come", 
-            "Soundgarden – Burden in My Hand", "Spoon – Black Like Me", 
-            "Stone Temple Pilots – Interstate Love Song", "Streetlight Manifesto – Three of Us", 
-            "Talking Heads – This Must Be the Place", "Tennis – Petition", "The Band – Atlantic City", 
-            "The Black Keys – Sister", "The Chemical Brothers – Saturate", "The Domestics – Tower Blocks", 
-            "The Helio Sequence – Can't Say No", "the human league-dont you want me", 
-            "The Mountain Goats – Cotton", "Tokyo Police Club – Breakneck Speed", 
-            "Trampled by Turtles – Starting Over", "Vampire Weekend – Hannah Hunt", 
-            "Van Morrison – Into the Mystic", "Washed Out – It All Feels Right", 
-            "We were promised jetpacks-dont hold your breath", "Weezer – Say It Ain't So", 
-            "Westerman-csi petralona", "White Denim – Handwriting", "Will butler-what i want", 
-            "Will epstein-moving", "Wu-Tang Clan – Can It Be All So Simple", "Zero 7 – Polaris"
-        ];
-
-        const container = document.getElementById('tracklist');
-
-        // Parse and Sort the data
-        const sortedSongs = rawSongs.map(item => {
-            let parts = item.split(/[–-]/);
-            return {
-                artist: parts[0].trim(),
-                title: parts.slice(1).join('-').trim()
-            };
-        }).sort((a, b) => a.artist.toLowerCase().localeCompare(b.artist.toLowerCase()));
-
-        // Render the sorted list
-        sortedSongs.forEach(song => {
-            const row = document.createElement('div');
-            row.className = 'track-row py-4 flex flex-col md:flex-row md:items-baseline justify-between group cursor-default';
-            row.innerHTML = `
-                <span class="text-xl md:text-2xl serif group-hover:italic transition-all uppercase md:normal-case">${song.artist}</span>
-                <span class="text-gray-500 text-xs uppercase tracking-widest mt-1 md:mt-0 italic md:not-italic">${song.title || 'Untitled'}</span>
-            `;
-            container.appendChild(row);
-        });
-    </script>
-
-    <footer class="max-w-4xl mx-auto mb-12 border-t border-white/5 pt-8 text-[10px] text-gray-700 tracking-[0.2em] uppercase flex justify-between">
-        <p>© 2026 CUHLUR</p>
-        <p>Sound Archive</p>
-    </footer>
-
+<body>
+<p>Cuhlur</p>
+<a href="/">Home</a>
+<a href="/artists">Artists</a>
+<a href="/books">Books</a>
+<a href="/movies">Movies</a>
+<a href="/songs">Songs</a>
+<a href="/tv">TV</a>
 </body>
 </html>
-
