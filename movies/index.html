@@ -1,74 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies | CUHLUR</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
-        
-        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .movie-card { background: linear-gradient(45deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%); transition: all 0.3s ease; }
-        .movie-card:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); transform: translateY(-3px); }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuhlur | Movies</title>
+ <link rel="stylesheet" href="styles.css">
+<style>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LZD9DR8ZX5');
-    </script>
+</style>
+
 </head>
-<body class="p-6 md:p-16">
-
-    <nav class="max-w-6xl mx-auto mb-12">
-        <a href="/" class="text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-white transition">← Archive Home</a>
-    </nav>
-
-    <header class="max-w-6xl mx-auto mb-16">
-        <h1 class="text-5xl md:text-7xl serif italic font-bold tracking-tighter">Cinema.</h1>
-        <p class="mt-4 text-gray-500 uppercase tracking-widest text-xs">A Collection of Moving Images</p>
-    </header>
-
-    <main class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        
-        <script>
-            const movies = [
-                "8 1/2", "12 Angry Men", "21 Jump Street", "22 Jump Street", "78", 
-                "All About My Mother", "Alphaville", "Au Revoir Les Enfants", "Bamboozled", 
-                "Billy Madison", "Blade Runner", "Blade Runner 2049", "Central Station", 
-                "Enron: The Smartest People in the Room", "Exit Through the Gift Shop", 
-                "Fight Club", "Gimme Danger", "Gremlins 2", "Howl", "Kung Fury", 
-                "Leatherface: Texas Chainsaw Massacre 3", "Long Strange Trip", 
-                "Lost in Translation", "Man Bites Dog", "Midnight in Paris", 
-                "Monterey Pop", "New York Doll", "North by Northwest", 
-                "Pearl Jam Twenty", "Ready Player One", "Run Lola Run", 
-                "Sanjuro", "Sin City", "Singles", "Somewhere", "Stop Making Sense", 
-                "The 400 Blows", "The Apartment", "The Big Short", "The Corporation", 
-                "The Lives of Others", "The Naked Lunch", "The Seven Samurai", 
-                "The Simpsons Movie", "The Strangers", "The Strangers 2", 
-                "The Tune", "Tommy Boy", "Two or Three Things I Know About Her", 
-                "V/H/S", "V/H/S 2", "Yojimbo", "Zoolander"
-            ];
-
-            document.write(movies.map(movie => `
-                <div class="movie-card border border-white/10 p-5 md:p-8 rounded-lg flex items-center justify-center text-center aspect-video group cursor-default">
-                    <span class="text-lg md:text-xl serif group-hover:italic transition-all duration-300">
-                        ${movie}
-                    </span>
-                </div>
-            `).join(''));
-        </script>
-
-    </main>
-
-    <footer class="max-w-6xl mx-auto mt-32 mb-12 border-t border-white/5 pt-8 text-[10px] text-gray-700 tracking-[0.2em] uppercase flex justify-between">
-        <p>© 2026 CUHLUR</p>
-        <p>Film Archive</p>
-    </footer>
-
+<body>
+<p>Cuhlur</p>
+<a href="/">Home</a>
+<a href="/artists">Artists</a>
+<a href="/books">Books</a>
+<a href="/movies">Movies</a>
+<a href="/songs">Songs</a>
+<a href="/tv">TV</a>
 </body>
 </html>
-
