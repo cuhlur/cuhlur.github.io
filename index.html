@@ -23,10 +23,12 @@
 <section class="blog-section">
   <h2>Recent Entries</h2>
   <ul>
-    {% for post in site.posts %}
+    <!-- Sorted by the 'date' variable inside the file's front matter, newest first -->
+    {% assign sorted_entries = site.entries | sort: 'date' | reverse %}
+    {% for post in sorted_entries %}
       <li>
         {% if post.external_url %}
-          <a href="{{ post.external_url }}" rel="noopener noreferrer">{{ post.title }} ↗</a>
+          <a href="{{ post.external_url }}" target="_blank" rel="noopener noreferrer">{{ post.title }} ↗</a>
         {% else %}
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         {% endif %}
