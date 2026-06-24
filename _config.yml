@@ -1,8 +1,4 @@
-title: Cuhlur
-description: A curated space for media, literature, and projects.
-url: "https://cuhlur.github.io"
-
-# This prevents Jekyll from accidentally breaking folders you already use
-exclude:
-  - README.md
-  - LICENSE
+collections:
+  entries:
+    output: true
+    permalink: /blog/:title/
