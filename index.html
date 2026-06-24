@@ -18,17 +18,16 @@
 <a href="/movies">Movies</a>
 <a href="/songs">Songs</a>
 <a href="/tv">TV</a>
- <!-- Place this inside your existing index.html container where you want the blog feed -->
+<!-- Place this inside your existing index.html container -->
 <section class="blog-section">
   <h2>Recent Entries</h2>
   <ul>
     {% for post in site.posts %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a> 
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a> 
         <span class="date">— {{ post.date | date: "%b %d, %Y" }}</span>
       </li>
     {% endfor %}
   </ul>
-</section>
-</body>
+</section></body>
 </html>
