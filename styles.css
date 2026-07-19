@@ -1,0 +1,28 @@
+/*grvl 20260622 */
+a{color:darkblue;outline:0;text-decoration:none;}
+a:hover{text-decoration:underline;}
+body{font-family:arial;font-size:16px;margin:0px;padding:0px;}
+footer{margin:50px 0;}
+footer p{color:gray;font-size:12px;text-align:center;}
+header{background:black;color:white;line-height:1.2;padding:11px;}
+header p{font-size:20px;margin:0;}
+hr{border:none;border-bottom:1px solid lightgray;}
+p{font-family:arial;}
+.box{padding:11px;}
+.content{display:flex;flex-direction:column;padding:11px;}
+.hero{border:solid red;text-align:center;}
+.hero p{font-size:26px;font-weight:bold;line-height:4;}
+.hero .btn{background:black;color:white;display:block;line-height:3.5;margin:10px 30px;}
+.hero .btn:hover{background:gray;text-decoration:none;}
+.left{border:1px solid lightgray;order:2;width:100%;}
+.left .box{padding:0px;}
+.middle{border:1px solid lightgray;order:1;width:100%;}
+.right{border:1px solid lightgray;order:3;width:100%;}
+
+@media(min-width:800px){
+body{margin:0px 200px;}
+.content{flex-direction:row;}
+.left{order:1;}
+.middle{order:2;}
+.right{order:3;}
+}
