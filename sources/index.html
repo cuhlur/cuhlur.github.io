@@ -1,73 +1,21 @@
+---
+# This can be totally empty, but the triple dashes must be here!
+---
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sources | CUHLUR</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
-        
-        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .source-card { background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%); transition: all 0.3s ease; }
-        .source-card:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); }
-        .source-card:hover .arrow { transform: translate(2px, -2px); opacity: 1; }
-    </style>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LZD9DR8ZX5');
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuhlur | Sources</title>
+ <link rel="stylesheet" href="styles.css">
+<style>
+</style>
+
 </head>
-<body class="p-6 md:p-16">
+<body>
+<p>Cuhlur</p>
+<a href="/">Home</a>
+<p>Sources</p>
 
-    <nav class="max-w-5xl mx-auto mb-12">
-        <a href="/" class="text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-white transition">← Archive Home</a>
-    </nav>
 
-    <header class="max-w-5xl mx-auto mb-16">
-        <h1 class="text-5xl md:text-7xl serif italic font-bold tracking-tighter">Sources.</h1>
-        <p class="mt-4 text-gray-500 uppercase tracking-widest text-xs">Primary Curators & Media Intelligence</p>
-    </header>
-
-    <main class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <script>
-            const sources = [
-                { name: "Consequence", url: "https://consequence.net/" },
-                { name: "Criterion", url: "https://www.criterion.com/" },
-                { name: "Gorilla vs Bear", url: "https://www.gorillavsbear.net/" },
-                { name: "Metacritic", url: "https://www.metacritic.com/" },
-                { name: "Pitchfork", url: "https://pitchfork.com/" },
-                { name: "Quanta", url: "https://www.quantamagazine.org/" },
-                { name: "Rolling Stone", url: "https://www.rollingstone.com/" },
-                { name: "SomaFM", url: "https://somafm.com/" },
-                { name: "Stereogum", url: "https://www.stereogum.com/" }
-            ];
-
-            // Sort alphabetically
-            sources.sort((a, b) => a.name.localeCompare(b.name));
-
-            document.write(sources.map(source => `
-                <a href="${source.url}" target="_blank" rel="noopener" class="source-card border border-white/10 p-10 rounded-xl group relative overflow-hidden">
-                    <div class="flex justify-between items-start">
-                        <span class="text-2xl md:text-3xl serif group-hover:italic transition-all">${source.name}</span>
-                        <span class="arrow opacity-30 transition-all duration-300 text-xl font-light">↗</span>
-                    </div>
-                    <p class="text-[10px] text-gray-600 uppercase tracking-[0.2em] mt-4 opacity-0 group-hover:opacity-100 transition-opacity">External Intelligence</p>
-                </a>
-            `).join(''));
-        </script>
-
-    </main>
-
-    <footer class="max-w-5xl mx-auto mt-32 mb-12 border-t border-white/5 pt-8 text-[10px] text-gray-700 tracking-[0.2em] uppercase flex justify-between">
-        <p>© 2026 CUHLUR</p>
-        <p>Resource Directory</p>
-    </footer>
 
 </body>
 </html>
-
