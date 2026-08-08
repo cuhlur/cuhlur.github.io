@@ -11,42 +11,5 @@
 
 </head>
 <body>
-<p>Cuhlur</p>
-<a href="/">Home</a>
-<a href="/aboutus">About Us</a>
-<a href="/artists">Artists</a>
-<a href="/books">Books</a>
-<a href="/movies">Movies</a>
-<a href="/playlists">Playlists</a>
-<a href="/songs">Songs</a>
-<a href="/sources">Sources</a>
-<a href="/themes">Themes</a>
-<a href="/tv">TV</a>
-
-<p>Latest</p>
-<a href="/db/003">Temple of the Dog</a>
-<a href="/db/002">Mother Love Bone</a>
-<a href="/db/001">Pearl Jam</a>
-<a href="/themes/seattle">Themes - Seattle</a>
- 
-<section class="blog-section">
-  <h2>Articles</h2>
-  <ul>
-    <!-- Sorted by the 'date' variable inside the file's front matter, newest first -->
-    {% assign sorted_entries = site.entries | sort: 'date' | reverse %}
-    {% for post in sorted_entries %}
-      <li>
-        {% if post.external_url %}
-          <a href="{{ post.external_url }}" target="_blank" rel="noopener noreferrer">{{ post.title }} ↗</a>
-        {% else %}
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        {% endif %}
-        <span class="date">— {{ post.date | date: "%b %d, %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-
-
 </body>
 </html>
